@@ -1,0 +1,7 @@
+﻿  node.cpp
+  stack.cpp
+C:\Users\Tab & Tech\source\repos\Project28\Project28\stack.cpp(163,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Generating Code...
+C:\Users\Tab & Tech\source\repos\Project28\Project28\stack.cpp(62): warning C4715: 'stack::peek': not all control paths return a value
+C:\Users\Tab & Tech\source\repos\Project28\Project28\stack.cpp(82): warning C4715: 'stack::pop': not all control paths return a value
+  Project28.vcxproj -> C:\Users\Tab & Tech\source\repos\Project28\x64\Debug\Project28.exe
