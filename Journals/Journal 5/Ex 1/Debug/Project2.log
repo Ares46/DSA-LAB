@@ -1,0 +1,5 @@
+﻿  DList.cpp
+  main.cpp
+C:\Users\Student\source\repos\Project2\Project2\main.cpp(4): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Generating Code...
+  Project2.vcxproj -> C:\Users\Student\source\repos\Project2\Debug\Project2.exe
