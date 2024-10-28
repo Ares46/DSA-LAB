@@ -1,0 +1,6 @@
+﻿  Source.cpp
+C:\Users\Tab & Tech\source\repos\op\op\Source.cpp(23,16): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Tab & Tech\source\repos\op\op\Source.cpp(30,15): warning C4804: '<=': unsafe use of type 'bool' in operation
+C:\Users\Tab & Tech\source\repos\op\op\Source.cpp(108,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+stack.obj : error LNK2005: main already defined in Source.obj
+C:\Users\Tab & Tech\source\repos\op\x64\Debug\op.exe : fatal error LNK1169: one or more multiply defined symbols found
