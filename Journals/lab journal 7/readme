@@ -1,0 +1,37 @@
+# Queue Data Structure Implementation  
+
+This project is part of the exploration of **Queue** data structures. The objective of this task is to implement the queue data structure and demonstrate its functionality through various operations such as enqueue, dequeue, and front element access.  
+
+## Objective  
+
+The goal of this lab is to:  
+- Implement a **queue** data structure from scratch.  
+- Understand and utilize the **FIFO (First In, First Out)** principle.  
+- Implement core queue operations and test them with different use cases.  
+
+## Features  
+
+- **Custom Queue Implementation:**  
+  - Built from scratch without using standard queue libraries.  
+  - Implements core operations like:  
+    - **Enqueue:** Add elements to the rear of the queue.  
+    - **Dequeue:** Remove elements from the front of the queue.  
+    - **Front:** View the front element without removing it.  
+    - **IsEmpty:** Check if the queue is empty.  
+    - **Size:** Get the number of elements in the queue.  
+
+## Lab Instructions  
+
+1. Implement the **queue** data structure in C++ using either an array or linked list.  
+2. Implement and test the queue operations to ensure that the queue behaves as expected:  
+   - Add and remove elements.  
+   - Access and display the front element.  
+   - Handle edge cases such as attempting to dequeue from an empty queue.  
+3. Document the code with clear comments and meaningful variable names.  
+
+## How to Run  
+
+1. Clone the repository:  
+   ```bash  
+   git clone https://github.com/your-username/queue-implementation.git  
+   cd queue-implementation  
