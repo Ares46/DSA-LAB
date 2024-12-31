@@ -1,0 +1,41 @@
+# Lab 5: Advanced Data Structures  
+
+This project is part of **Lab 5**, focusing on the implementation and manipulation of advanced data structures, specifically **circular linked lists** and **dummy node linked lists**.  
+
+## Objective  
+
+The goal of this lab is to:  
+- Deepen the understanding of linked lists by implementing specialized structures.  
+- Explore practical use cases for circular linked lists and dummy nodes.  
+- Strengthen problem-solving skills by handling edge cases in list operations.  
+
+## Features  
+
+### Circular Linked List  
+- **Key Characteristics:**  
+  - Nodes form a loop, with the last node pointing back to the first.  
+  - Useful for problems like round-robin scheduling or continuous traversal.  
+- **Implemented Operations:**  
+  - Add, delete, and traverse nodes.  
+  - Maintain the circular structure during modifications.  
+
+### Dummy Node Linked List  
+- **Key Characteristics:**  
+  - Includes a dummy node at the start, simplifying edge cases.  
+  - Improves code readability and reduces error-prone conditions.  
+- **Implemented Operations:**  
+  - Add and delete nodes seamlessly.  
+  - Traverse and display the list.  
+
+## Lab Instructions  
+
+1. Implement both **circular linked lists** and **dummy node linked lists** in C++.  
+2. Test the code with various inputs to ensure robustness.  
+3. Document the code using meaningful variable names and comments.  
+
+## How to Run  
+
+1. Clone the repository:  
+   ```bash  
+   git clone https://github.com/your-username/lab-5-advanced-lists.git  
+   cd lab-5-advanced-lists  
