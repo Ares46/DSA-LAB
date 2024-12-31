@@ -1,0 +1,28 @@
+# Node and List Implementation  
+
+This project demonstrates the fundamental concepts of **nodes** and **linked lists**. It serves as a practical application of data structure knowledge, showcasing how nodes can be used to build and manipulate lists dynamically.  
+
+## Features  
+
+- **Node Structure:** Each node contains data and a pointer/reference to the next node.  
+- **Linked List Operations:**  
+  - Add nodes to the list (at the beginning, middle, or end).  
+  - Traverse and display the list.  
+  - Insert nodes after specific values.  
+  - Delete nodes.  
+  - Handle special cases (e.g., empty lists or non-existent values).  
+- **Dynamic Memory Management:** Efficient allocation and deallocation of memory for nodes.  
+
+## Purpose  
+
+This project was built to solidify the understanding of:  
+- How linked lists are constructed and manipulated.  
+- The relationship between nodes and pointers/references.  
+- Implementation of basic and advanced linked list operations.  
+
+## How to Use  
+
+1. Clone the repository:  
+   ```bash  
+   git clone https://github.com/your-username/node-list-implementation.git  
+   cd node-list-implementation  
