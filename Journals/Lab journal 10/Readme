@@ -1,0 +1,47 @@
+# MinHeap Implementation
+
+This repository contains a C++ implementation of a **MinHeap** data structure, which is a type of binary heap. A **MinHeap** ensures that the value of each parent node is less than or equal to the values of its child nodes, making it ideal for efficient retrieval of the minimum element.
+
+The provided code includes various operations such as insertion, extraction of the minimum value, key deletion, and heap property maintenance through heapify operations.
+
+## Features
+
+- **Insert a Key**: Insert a new key into the heap, maintaining the MinHeap property.
+- **Extract Minimum Value**: Extract the root of the heap, which is always the minimum value.
+- **Decrease Key**: Decrease the value of an existing key in the heap and adjust the heap to maintain the MinHeap property.
+- **Delete a Key**: Decrease the key value to a very small number and extract the minimum, effectively deleting it.
+- **MinHeapify**: Rearranges the heap to restore the MinHeap property after a node has been changed or removed.
+
+## Structure
+
+- **Heap Array**: The heap is implemented as an array, where each element is a node in the heap.
+- **MinHeap Class**:
+  - **insertKey(int k)**: Inserts a new key into the heap and maintains the MinHeap property.
+  - **decreaseKey(int i, int new_val)**: Decreases the value of the key at index `i` to `new_val` and reorders the heap.
+  - **extractMin()**: Extracts and returns the minimum element (root) from the heap.
+  - **deleteKey(int i)**: Deletes a key at index `i` by first decreasing its value to `INT_MIN` and then extracting it.
+  - **MinHeapify(int i)**: Ensures the heap property is maintained starting from node `i`.
+  - **getMin()**: Returns the minimum element in the heap (root).
+
+## Usage
+
+```cpp
+// Create a MinHeap with a capacity of 10 elements
+MinHeap h(10);
+
+// Insert keys into the MinHeap
+h.insertKey(3);
+h.insertKey(1);
+h.insertKey(6);
+h.insertKey(5);
+h.insertKey(2);
+h.insertKey(4);
+
+// Get the root of the MinHeap (the minimum value)
+cout << "Min-Heap Root: " << h.getMin() << endl;
+
+// Delete a key (Assuming 2 is at index 1 after insertion)
+h.deleteKey(1);
+
+// Get the new root after deleting key 2
+cout << "Min-Heap Root after deleting 2: " << h.getMin() << endl;
