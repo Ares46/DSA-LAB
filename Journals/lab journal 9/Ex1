@@ -1,0 +1,105 @@
+#include <iostream> using namespace std; 
+ 
+// Node class to represent a Binary Search Tree node class TNode { public: 
+    int data;       // Data stored in the node     TNode *left;    // Pointer to the left child 
+    TNode *right;   // Pointer to the right child 
+ 
+    // Default constructor 
+    TNode() : data(0), left(nullptr), right(nullptr) {} 
+ 
+    // Parameterized constructor 
+    TNode(int val) : data(val), left(nullptr), right(nullptr) {} 
+}; 
+ 
+// Binary Search Tree class class BST { public: 
+    TNode *root; // Root node of the tree 
+ 
+    // Constructor to initialize an empty tree 
+    BST() : root(nullptr) {} 
+ 
+    // Function to check if the tree is empty     bool isEmpty() {         return root == nullptr; 
+    } 
+ 
+    // Function to insert a node with a given value     void insert(TNode *&node, int value) {         if (node == nullptr) {             node = new TNode(value); // Insert the node 
+        } else if (value < node->data) {             insert(node->left, value); // Insert in the left subtree 
+        } else { 
+            insert(node->right, value); // Insert in the right subtree 
+        } 
+    } 
+ 
+    // Wrapper function for insertion     void insert(int value) {         insert(root, value); 
+    } 
+ 
+    // Function to search for a node with a given value     bool search(TNode *node, int value) {         if (node == nullptr) {             return false; // Value not found         } else if (node->data == value) {             return true; // Value found         } else if (value < node->data) {             return search(node->left, value); // Search in the left subtree         } else { 
+            return search(node->right, value); // Search in the right subtree 
+        } 
+    } 
+ 
+    // Wrapper function for searching     bool search(int value) {         return search(root, value); 
+    } 
+ 
+    // Function to find the minimum value in the tree or subtree     TNode* findmin(TNode *node) {         while (node && node->left != nullptr) {             node = node->left; // Keep traversing left to find the minimum 
+        } 
+        return node; 
+    } 
+ 
+    // Function to delete a node with a given value     void delete_node(TNode *&node, int value) {         if (node == nullptr) return; 
+ 
+        if (value < node->data) {             delete_node(node->left, value); // Search in the left subtree 
+        } else if (value > node->data) {             delete_node(node->right, value); // Search in the right subtree 
+        } else { 
+            // Node to be deleted found             if (node->left == nullptr && node->right == nullptr) {                 delete node; // Case 1: Leaf node                 node = nullptr; 
+            } else if (node->left == nullptr) {                 TNode *temp = node;                 node = node->right; // Case 2: Node has only right child                 delete temp; 
+            } else if (node->right == nullptr) { 
+                TNode *temp = node; 
+                node = node->left; // Case 2: Node has only left child                 delete temp; 
+            } else { 
+                // Case 3: Node has two children 
+                TNode *temp = findmin(node->right); // Find minimum in the right subtree                 node->data = temp->data; // Replace data with in-order successor                 delete_node(node->right, temp->data); // Delete the in-order successor 
+            } 
+        } 
+    } 
+ 
+    // Wrapper function for deletion     void delete_node(int value) {         delete_node(root, value); 
+    } 
+ 
+    // Function to perform in-order traversal     void in_orderTraverse(TNode *node) { 
+        if (node != nullptr) {             in_orderTraverse(node->left);             cout << node->data << " ";             in_orderTraverse(node->right); 
+        } 
+    } 
+ 
+    // Wrapper function for in-order traversal     void in_orderTraverse() {         in_orderTraverse(root);         cout << endl; 
+    } 
+ 
+    // Function to find the parent of a given node     TNode* getParent(TNode *node, int value) {         if (node == nullptr || (node->left == nullptr && node->right == nullptr)) {             return nullptr; 
+        } 
+ 
+        if ((node->left && node->left->data == value) || (node->right && node->right->data == 
+value)) { 
+            return node; // Current node is the parent 
+        } else if (value < node->data) {             return getParent(node->left, value); // Search in the left subtree 
+        } else { 
+            return getParent(node->right, value); // Search in the right subtree 
+        } 
+    } 
+ 
+    // Wrapper function for getting parent     TNode* getParent(int value) {         return getParent(root, value); 
+    } 
+}; 
+ 
+// Example usage int main() { 
+    BST bst; 
+ 
+    // Inserting nodes     bst.insert(10);     bst.insert(5);     bst.insert(15);     bst.insert(3);     bst.insert(7); 
+ 
+    // Display the BST in-order     cout << "In-order Traversal: ";     bst.in_orderTraverse(); 
+ 
+    // Search for a node     int searchValue = 7;     cout << "Search " << searchValue << ": " << (bst.search(searchValue) ? "Found" : "Not Found") << endl; 
+ 
+    // Find minimum value 
+    cout << "Minimum value: " << bst.findmin(bst.root)->data << endl; 
+ 
+    // Delete a node     bst.delete_node(5);     cout << "After deleting 5, In-order Traversal: ";     bst.in_orderTraverse(); 
+ 
+    return 0; 
+} 
