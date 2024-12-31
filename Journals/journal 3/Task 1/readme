@@ -1,0 +1,28 @@
+# Stack Implementation  
+
+This project demonstrates the implementation of a **stack** data structure from scratch. It highlights the core functionality of stacks, including their **LIFO (Last In, First Out)** behavior, and provides a practical example of managing data using this structure.  
+
+## Features  
+
+- **Custom Stack Implementation:** Built without relying on standard libraries.  
+- **Core Operations:**  
+  - **Push:** Add elements to the top of the stack.  
+  - **Pop:** Remove elements from the top of the stack.  
+  - **Peek/Top:** View the element at the top without removing it.  
+  - **IsEmpty:** Check if the stack is empty.  
+  - **Size:** Get the number of elements in the stack.  
+- **Dynamic Memory Management:** Efficient handling of stack growth and shrinkage.  
+
+## Purpose  
+
+This project was created to strengthen the understanding of:  
+- The **stack** data structure and its practical uses.  
+- How to manually manage memory and implement stack operations.  
+- LIFO behavior in real-world problem solving.  
+
+## How to Use  
+
+1. Clone the repository:  
+   ```bash  
+   git clone https://github.com/your-username/stack-implementation.git  
+   cd stack-implementation  
