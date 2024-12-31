@@ -1,0 +1,34 @@
+# Circular and Dummy Linked List Implementation  
+
+This project demonstrates the implementation of two advanced linked list types: **Circular Linked Lists** and **Dummy Node Linked Lists**. These structures extend the capabilities of traditional linked lists and are designed for specialized use cases where enhanced traversal or simplified operations are needed.  
+
+## Features  
+
+### Circular Linked List  
+- **Circular Structure:** The last node points back to the first node, forming a loop.  
+- **Key Operations:**  
+  - Add nodes to the list (at the beginning, middle, or end).  
+  - Traverse nodes in a circular manner.  
+  - Delete nodes while maintaining the circular structure.  
+  - Efficient handling of edge cases, such as single-node lists.  
+
+### Dummy Node Linked List  
+- **Dummy Node:** A placeholder node at the start of the list simplifies operations like insertion and deletion.  
+- **Key Operations:**  
+  - Add and delete nodes without the need for special edge-case handling.  
+  - Traverse and display the list.  
+  - Maintain a consistent starting point for all operations.  
+
+## Purpose  
+
+This project showcases:  
+- The versatility of **circular linked lists** for applications like buffering, scheduling, and gaming.  
+- The simplicity and robustness introduced by **dummy nodes** in list operations.  
+- Dynamic memory management and pointer manipulation in complex linked list scenarios.  
+
+## How to Use  
+
+1. Clone the repository:  
+   ```bash  
+   git clone https://github.com/your-username/circular-dummy-lists.git  
+   cd circular-dummy-lists  
