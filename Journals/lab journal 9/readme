@@ -1,0 +1,56 @@
+# Binary Search Tree (BST) Implementation
+
+This repository contains a C++ implementation of a **Binary Search Tree (BST)**. The BST class provides basic operations such as insertion of nodes, searching for a specific value, and finding the maximum value in the tree. Additionally, it includes standalone functions for:
+
+1. **Printing the path** from the root node to a given target node.
+2. **Finding the maximum value** in the BST.
+3. **Finding the sibling node** of a given node, if it exists.
+
+## Features
+
+- **Insert a Node**: Insert values into the BST while maintaining its properties (left child < parent < right child).
+- **Search for a Node**: Find a node with a given value in the tree.
+- **Print Path to Node**: Given an integer value, print the path of nodes from the root to the target node.
+- **Find Maximum Value**: Retrieve the maximum value in the BST (the rightmost node).
+- **Find Sibling Node**: Given a node's value, find its sibling node if it exists.
+
+## Structure
+
+- **Node Structure**: Each node contains an integer value and two pointers (`left` and `right`) to its child nodes.
+- **BST Class**:
+  - **insert(int value)**: Inserts a new value into the tree.
+  - **search(int value)**: Searches for a node with the specified value.
+  - **findMax()**: Returns the maximum value from the BST.
+  - **printPath(int value)**: Prints the path from the root to a node containing the given value.
+  - **findSibling(int value)**: Finds the sibling node of the specified node, if it exists.
+
+## Usage
+
+### Inserting and Traversing the Tree
+
+```cpp
+// Create an instance of the BST
+BST tree;
+
+// Insert values into the BST
+tree.insert(50);
+tree.insert(30);
+tree.insert(20);
+tree.insert(40);
+tree.insert(70);
+tree.insert(60);
+tree.insert(80);
+
+// Print the path to a specific node
+cout << "Path to node 40: ";
+printPath(tree.root, 40);
+
+// Find the maximum value in the tree
+cout << "Maximum value in the tree: " << findMax(tree.root) << endl;
+
+// Find the sibling of a specific node
+Node* sibling = findSibling(tree.root, 30);
+if (sibling != nullptr)
+    cout << "Sibling of 30: " << sibling->data << endl;
+else
+    cout << "No sibling found for 30\n";
