@@ -1,0 +1,47 @@
+# MinHeap Data Structure Implementation
+
+This project implements a **MinHeap** data structure in C++. A MinHeap is a binary tree where the value of the parent node is always less than or equal to the values of its children, making the smallest element always at the root. This implementation includes basic operations like insertion, extraction of the minimum element, and deletion of a key.
+
+## Features
+
+- **MinHeap Class Implementation**:  
+  - **insertKey(int k)**: Inserts a new key into the heap while maintaining the MinHeap property.
+  - **extractMin()**: Extracts and returns the minimum element from the heap (root element), followed by restoring the heap property.
+  - **deleteKey(int i)**: Deletes a key at a specific index by decreasing its value and moving it to the root, then calling `extractMin()` to remove it.
+  - **getMin()**: Returns the minimum value present in the heap.
+  - **MinHeapify(int i)**: A utility function used to maintain the MinHeap property by recursively adjusting the tree.
+  - **swap(int *x, int *y)**: A helper function to swap two integers.
+
+## Class Structure
+
+- **harr**: An array representing the heap.
+- **capacity**: The maximum capacity of the heap.
+- **heap_size**: The current number of elements in the heap.
+
+## Example Usage
+
+### Inserting and Extracting Elements
+
+```cpp
+// Creating a MinHeap object with a capacity of 11
+MinHeap h(11);
+
+// Insert keys into the heap
+h.insertKey(3);
+h.insertKey(1);
+h.insertKey(6);
+h.insertKey(5);
+h.insertKey(2);
+h.insertKey(4);
+
+// Display the minimum value
+cout << "Minimum value in the heap: " << h.getMin() << endl;
+
+// Extract the minimum value
+cout << "Extracting minimum value: " << h.extractMin() << endl;
+cout << "New minimum after extraction: " << h.getMin() << endl;
+
+// Delete the key at index 2
+cout << "Deleting key at index 2 (value 6)" << endl;
+h.deleteKey(2);
+cout << "New minimum after deletion: " << h.getMin() << endl;
